@@ -108,9 +108,9 @@ int getColumnTotal(const std::array<std::array<int,5>,5> &primeNums, int x)
 
   for(int j = 0; j < 5; j++)
   {
-    columnTotal += primeNums[x-1][j];
+    columnTotal += primeNums[j][x-1];
   }
-  return x,columnTotal; 
+  return columnTotal; 
 }
 
 //---------------------------------------------
@@ -159,7 +159,7 @@ void whichFunctionFunction()
   int columnAsk;
 
   std::cout << "How would you like to analyze this data? Type [y] to close the program, as well.\n" 
-    << "Total[1], Avg[2], Row Total[3]," <<
+    << "Total[1], Avg[2], Row Total[3], " <<
      "Column Total[4], Largest in Row[5], Smallest in Row[6]\nYour choice: ";
   std::cin >> userChoice;
 
